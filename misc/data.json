@@ -1,0 +1,54 @@
+{
+  "lectures": ["lazeriai", "dirbtinis_intektas"],
+  "activities": ["airsoft", "ekspermentai"],
+  "all_itmes": {
+    "lazeriai": {
+      "type": "lecture",
+      "lecturer": "Kernius Vilkevičius",
+      "lecturer_desc": "A young researcher in the field of plasmonics and nanophotonics. The area of investigation is plasmonic materials fabricated using ultrashort lasers. Studying PhD of Material Engineering at Center for Physical Sciences and Technology.",
+      "lecturer_img": null,
+      "activity": "Lazeriai: nuo Žvaigždžių karų iki vėžio gydymo",
+      "activity_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a hendrerit dui, a feugiat velit. Maecenas porttitor, ipsum at ultricies aliquet, ante sapien consectetur ligula, in viverra ligula erat placerat eros. Vestibulum ut tortor cursus, maximus turpis ac, commodo neque. Pellentesque molestie dui at tortor rhoncus pellentesque. Duis at vulputate orci. Nulla placerat vehicula neque et tristique. Vestibulum nec turpis id diam malesuada luctus vel eget ligula.",
+      "activity_img": null,
+      "recommended_age": "16+",
+      "times": [
+        {"from": "9:00", "to": "10:00", "total_participants": 200, "free_participants": 137}
+      ]
+    },
+    "dirbtinis_intektas": {
+      "type": "lecture",
+      "lecturer": "dr. Laura Daniusevičiūtė - Brazaitė",
+      "lecturer_desc": "Mokslinių tyrimų sritys apima neuromokslą/ugdymo neuromokslą, Įtraukųjį skaitmeninį ugdymą per dirbtinio intelekto technologijas, bei ryšį tarp žmogaus pažintinės funkcijos ir sveikatos kaip psichinės, fizinės ir socialinės gerovės",
+      "lecturer_img": null,
+      "activity": "Jaunimas ir dirbtinis intelektas: kur mes esame?",
+      "activity_desc": "Paskaitoje bus kalbama apie dirbtinio intelekto gristų technologijų galimybes, kurios prisidėtų stiprinant paauglių ir jaunuolių mokymąsi, kūrybinę raišką bei bendrąją gerovė.",
+      "activity_img": null,
+      "recommended_age": "12+",
+      "times": [
+        {"from": "11:00", "to": "11:45", "total_participants": 150, "free_participants": 10}
+      ]
+    },
+    "airsoft": {
+      "type": "activities",
+      "activity": "Airsoft ir Karybos mokslo pagrindai",
+      "activity_desc": "MB „Battalia“, kuri specializuojasi į Airsoft ir karinės temos veiklas bei apmokymus, suvienija jėgas su KTU SMD į jaudinantį bendradarbiavimo renginį, kuriame edukacija yra derinama su adrenaliną skatinančia patirtimi.",
+      "activity_img": null,
+      "recommended_age": null,
+      "times": [
+        {"from": "10:00", "to": "10:45", "total_participants": 20, "free_participants": 5},
+        {"from": "11:00", "to": "11:45", "total_participants": 20, "free_participants": 10}
+      ]
+    },
+    "ekspermentai": {
+      "type": "activities",
+      "activity": "Įdomieji eksperimentai",
+      "activity_desc": "KTU SMD surengs jau tradicija tapusius įdomiųjų eksperimentų pasirodymus",
+      "activity_img": null,
+      "recommended_age": null,
+      "times": [
+        {"from": "10:00", "to": "10:45", "total_participants": 20, "free_participants": 5},
+        {"from": "11:00", "to": "11:45", "total_participants": 20, "free_participants": 10}
+      ]
+    }
+  }
+}

@@ -11,7 +11,7 @@ This is a front end application for TN (KTU SMD Tyrėjų naktis) registration pa
 ## Roadmap
 
 - [x] Make a rough sketch (See misc/rough_sketch.png)
-- [ ] Create mock data examples (.json)
+- [X] Create mock data examples (misc/data.json)
 - [ ] Create rough app
 - [ ] Add more elaborate styling to app
 - [ ] Get feedback
