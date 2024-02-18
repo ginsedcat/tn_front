@@ -1,3 +1,5 @@
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -68,5 +70,7 @@ Gintautas Šedys
 ## Changelog
 
 - 0.1.0 Initialized a Next.js app
+
+- 0.1.1 Added initial activities selection list (Not functional yet)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

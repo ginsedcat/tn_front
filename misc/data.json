@@ -1,7 +1,9 @@
 {
-  "lectures": ["lazeriai", "dirbtinis_intektas"],
-  "activities": ["airsoft", "ekspermentai"],
-  "all_itmes": {
+  "activities_types": {
+    "lectures": ["lazeriai", "dirbtinis_intektas"],
+    "activities": ["airsoft", "ekspermentai"]
+  },
+  "all_items": {
     "lazeriai": {
       "type": "lecture",
       "lecturer": "Kernius Vilkevičius",
