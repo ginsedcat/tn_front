@@ -5,7 +5,7 @@ export const ActivitiesContext = createContext();
 
 export const ActivitiesProvider = ({ children }) => {
   const [activities, setActivities] = useState([]);
-  const [activitiesTypes, setActivitiesTypes] = useState([]);
+  const [activitiesTypes, setActivitiesTypes] = useState({lectures: [], activities: []});
 
   useEffect(() => {
     // Here you would fetch your data from an API instead of using the static data

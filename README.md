@@ -73,4 +73,7 @@ Gintautas Šedys
 
 - 0.1.1 Added initial activities selection list (Not functional yet)
 
+- 0.1.2
+  - Updated json mock data with better real life example
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

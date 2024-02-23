@@ -40,7 +40,7 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -71,7 +71,7 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -79,10 +79,9 @@
   margin: 0;
 }
 
-html,
+/* html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
@@ -93,9 +92,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
 }
@@ -104,7 +103,7 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
 
 .image {
   max-width: 200px;
@@ -116,22 +115,22 @@ a {
   flex-direction: row;
 }
 
-.activities {
+/* .activities {
   width: 40%;
   margin: 10px;
   display: flex;
   flex-direction: column;
   background-color: brown;
-}
+} */
 
-.timeline {
-  width: 40%;
-  height: 100px;
+/* .timeline {
+  width: 30%;
+  height: 300px;
   margin: 10px;
   background-color: brown;
-}
+} */
 
-.activity {
+/* .activity {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -141,7 +140,7 @@ a {
 
 .activity-item {
   display: flex;
-  flex-direction: column; /*FIXME TO ROW*/
+  flex-direction: column;
   justify-content: space-between;
   background-color: brown;
   padding: 10px;
@@ -160,4 +159,357 @@ a {
 .activity-footer-item {
   width: 33%;
   background-color: blue;
+} */
+/* 
+.item {
+  background-color: red;
+  padding: 10px;
+  margin: 10px;
+  padding-bottom: 300px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  padding: 10px;
+  margin: 10px;
+} */
+
+/* .item-item-item {
+  background-color: red;
+  padding: 10px;
+  margin: 10px;
+} */
+
+/* .flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+/*MENU*/
+/* .items-menu {
+  height: 100%;
+  background-color: cyan;
+  padding: 10px;
+}
+.item-menu {
+  background-color: blue;
+  padding: 1px;
+  padding-bottom: 5px;
+}
+.item-menu-item {
+  background-color: red;
+}
+
+.highlight {
+  background-color: green;
+} */
+
+.palceholder {
+  background-color: #F5F5F2;
+  border-style: solid;
+  border-color: #DCDCD9;
+  border-width: 2px;
+  border-radius: 3px;
+  margin: 10px 0;
+  width: 100%;
+  height: 300px;
+}
+/*** Main window -----------------------------------------*/
+.main-main {
+  background-color: #F5F5F2;
+  border-style: solid;
+  border-color: #DCDCD9;
+  border-width: 2px;
+  border-radius: 3px;
+  color: #2C2C2B;
+  margin: 0 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.item-item-item {
+  background-color: #F5F5F2;
+  border-style: solid;
+  border-color: #DCDCD9;
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+}
+.item-item-item h1 {
+  color: #2C2C2B;
+  font-size: 20px;
+}
+.item-item-item h2 {
+  color: #2C2C2B;
+  font-size: 18px;
+}
+.item-item-item-content {
+  background-color: #F5F5F2;
+  border-style: solid;
+  border-color: #DCDCD9;
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px 5px;
+  overflow: auto;
+  width: 100%;
+  /* max-width: 500px; */
+}
+.item-item-item-content img {
+  float: left;
+  margin: 5px;
+}
+.item-item-item-content p {
+  margin: 5px;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*** Menu ------------------------------------------------*/
+/********* Main view */
+.menu-main {
+  width: 300px;
+  background-color: #F5F5F2;
+  border-style: solid;
+  border-color: #DCDCD9;
+  border-width: 2px;
+  border-radius: 3px;
+  color: #2C2C2B;
+}
+/********* Hierarchy */
+.item-menu {
+  user-select: none;
+  margin: 10px;
+  padding-top: 4px;
+  padding-left: 8px;
+  background-color: #F5F5F2;
+  border-style: solid;
+  border-color: #DCDCD9;
+  border-width: 1px;
+  border-radius: 3px;
+}
+/********* Each option */
+.item-menu-item {
+  font-size: 17px;
+  color: #2C2C2B;
+  font-weight: 600;
+  cursor: pointer;
+}
+.item-menu-item:hover, .item-menu-item:focus {
+  color: #0A0A0A;
+  transform: scale(1.02);
+}
+.item-menu-item:active {
+  color: #0A0A0A;
+  transform: scale(0.98);
+}
+/********* Highlight */
+.highlight {
+  font-weight: 900;
+}
+/*** Time Line -------------------------------------------*/
+/********* Main view */
+.time-line {
+  user-select: none;
+  width: 300px;
+  background-color: #F5F5F2;
+  border-style: solid;
+  border-color: #DCDCD9;
+  border-width: 2px;
+  border-radius: 3px;
+  padding: 10px;
+}
+/********* Header */
+.time-line h1 {
+  color: #2C2C2B;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+/********* Time cell */
+.time-cell {
+  background-color: #DCDCD9;
+  border-style: solid;
+  border-color: #C6C6C3;
+  border-width: 2px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #2C2C2B;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  padding: 5px;
+}
+.time-cell:hover, .time-cell:focus {
+  background-color: #C6C6C3;
+  border-color: #B2B2AF;
+  transform: scale(1.02);
+}
+.time-cell:active {
+  background-color: #B2B2AF;
+  border-color: #A0A09D;
+  transform: scale(0.98);
+}
+/********* Time indicators */
+.time-text {
+  font-size: 15px;
+  color: #2C2C2B;
+  font-weight: 500;
+  padding-right: 10px;
+}
+/********* Submit button */
+button {
+  user-select: none;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #F5F5F2;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+button:hover, button:focus {
+  background-color: #0056b3;
+  transform: scale(0.98);
+}
+button:active {
+  background-color: #004094;
+  transform: scale(1.02);
+}
+/********* Select */
+select {
+  /* user-select: none; */
+  padding: 10px 20px;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  outline: none;
+  color: #2C2C2B;
+  font-weight: 700;
+  font-size: 13px;
+}
+select:hover, select:focus {
+  border-color: #0056b3;
+}
+select:after {
+  border-color: #0056b3;
+}
+option {
+  color: #2C2C2B;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+
+
+/* Style for the container of the Select component */
+.select-container {
+  margin-bottom: 5px;
+}
+
+/* Style for the select element */
+.custom-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Style for the options inside the select */
+.custom-select option {
+  padding: 5px;
+  background-color: #f8f8f8;
+}
+
+/* Style for the label of the select */
+.select-label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+/* Style for the container of the Input component */
+.input-container {
+  margin-bottom: 5px;
+}
+
+/* Style for the input element */
+.custom-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Style for the label of the input */
+.input-label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+
+
+
+
+
+
+
+.container-default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 10px;
+  background-color: #F5F5F2;
+  border-style: solid;
+  border-color: #DCDCD9;
+  border-width: 2px;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 10px;
+}
+.container-row {
+  display: flex;
+  flex-direction: row;
+}
+.input-default {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+.input-default-label {
+  text-align: left;
+  padding-right: 5px;
+}
+.input-default-input {
+  height: 30px;
+}
+.header-lvl-1 {
+  font-size: 20px;
+}
+.fit {
+  width: fit-content;
+  block-size: fit-content;
+}
+
+
+.height500 {
+  height: 500px;
 }

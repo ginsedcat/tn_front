@@ -3,15 +3,17 @@
 import styles from "./page.module.css";
 
 import React, { useContext } from 'react';
-import { ActivitiesProvider, ActivitiesContext } from './context/activitiesContextProvider';
-import { Register } from './components/register';
+// import { ActivitiesProvider, ActivitiesContext } from './context/activitiesContextProvider';
+import { Register } from './comp/register';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <ActivitiesProvider>
+      <Register></Register>
+      {/* <ActivitiesProvider>
+        <Register></Register>
         <App></App>
-      </ActivitiesProvider>
+      </ActivitiesProvider> */}
     </main>
   );
 }

@@ -1,55 +1,211 @@
 {
-  "activities_types": {
-    "lectures": ["lazeriai", "dirbtinis_intektas"],
-    "activities": ["airsoft", "ekspermentai"]
-  },
+  "items": [
+    {
+      "key": "activities",
+      "items": [{"key": "inzdirpt"}, {"key": "kurdirpt"}, {"key": "labuzsi"}, {"key": "idomeksp"}, {"key": "airsoft"}]
+    },
+    {
+      "key": "lectures",
+      "items": [{"key": "lazer"}, {"key": "patraukipat"}, {"key": "jaunimasai"}, {"key": "robotatlyg"}, {"key": "diponas"}, {"key": "juodskyl"}, {"key": "mokssriub"}, {"key": "oledlight"}]
+    }
+  ],
   "all_items": {
-    "lazeriai": {
+    "lectures": {
+      "key": "lectures",
+      "type": "title",
+      "name": "Paskaitos"
+    },
+    "activities": {
+      "key": "activities",
+      "type": "title",
+      "name": "Veiklos"
+    },
+    "inzdirpt": {
+      "key": "inzdirpt",
+      "type": "activities",
+      "name": "Inžinerinės dirbtuvės",
+      "activity_desc": "Užsiėmimų metu moksleiviai išmoks konstruoti bei lituoti „šviesoforą“, pypsiuką, mirksiuką ar LED stroboskopą",
+      "activity_img": null,
+      "recommended_age": null,
+      "times": [
+        {"key": "inzdirpt1", "from": "10:00", "to": "10:50", "total_participants": 20, "free_participants": 5, "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "inzdirpt2", "from": "11:00", "to": "11:50", "total_participants": 20, "free_participants": 10, "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "inzdirpt3", "from": "12:00", "to": "12:50", "total_participants": 20, "free_participants": 15, "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "inzdirpt4", "from": "13:00", "to": "13:50", "total_participants": 20, "free_participants": 20, "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "inzdirpt5", "from": "14:00", "to": "14:50", "total_participants": 20, "free_participants": 7, "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "inzdirpt6", "from": "15:00", "to": "15:50", "total_participants": 20, "free_participants": 20, "location": "Studentų g. 50, 501 auditorija"}
+      ]
+    },
+    "kurdirpt": {
+      "key": "kurdirpt",
+      "type": "activities",
+      "name": "Kūrybinės dirbtuvės",
+      "activity_desc": "Užsiėmimų metu moksleiviai pagal duotas instrukcijas konstruos skudučius, vėjo malūnėlius bei katapultas",
+      "activity_img": null,
+      "recommended_age": "iki 15 metų",
+      "times": [
+        {"key": "kurdirpt1", "from": "10:00", "to": "10:50", "total_participants": 20, "free_participants": 5,  "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "kurdirpt2", "from": "11:00", "to": "11:50", "total_participants": 20, "free_participants": 10, "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "kurdirpt3", "from": "12:00", "to": "12:50", "total_participants": 20, "free_participants": 15, "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "kurdirpt4", "from": "13:00", "to": "13:50", "total_participants": 20, "free_participants": 20, "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "kurdirpt5", "from": "14:00", "to": "14:50", "total_participants": 20, "free_participants": 7,  "location": "Studentų g. 50, 501 auditorija"},
+        {"key": "kurdirpt6", "from": "15:00", "to": "15:50", "total_participants": 20, "free_participants": 20, "location": "Studentų g. 50, 501 auditorija"}
+      ]
+    },
+    "labuzsi": {
+      "key": "labuzsi",
+      "type": "activities",
+      "name": "Laboratoriniai užsiėmimai",
+      "activity_desc": "Užsiėmimų metu moksleiviai atliks nepavojingus eksperimentus bei išmoks paprastus chemijos dėsnius",
+      "activity_img": null,
+      "recommended_age": "iki 15 metų",
+      "times": [
+        {"key": "labuzsi1", "from": "10:00", "to": "10:50", "total_participants": 15, "free_participants": 5,  "location": "Studentų g. 50, 260 auditorija"},
+        {"key": "labuzsi2", "from": "11:00", "to": "11:50", "total_participants": 15, "free_participants": 10, "location": "Studentų g. 50, 260 auditorija"},
+        {"key": "labuzsi3", "from": "12:00", "to": "12:50", "total_participants": 15, "free_participants": 15, "location": "Studentų g. 50, 260 auditorija"},
+        {"key": "labuzsi4", "from": "13:00", "to": "13:50", "total_participants": 15, "free_participants": 15, "location": "Studentų g. 50, 260 auditorija"},
+        {"key": "labuzsi5", "from": "14:00", "to": "14:50", "total_participants": 15, "free_participants": 7,  "location": "Studentų g. 50, 260 auditorija"}
+      ]
+    },
+    "idomeksp": {
+      "key": "idomeksp",
+      "type": "activities",
+      "name": "Įdomieji eksperimentai",
+      "activity_desc": "Moksleiviai stebės jau tradicija tapusius įdomiųjų eksperimentų pasirodymus",
+      "activity_img": null,
+      "recommended_age": null,
+      "times": [
+        {"key": "idomeksp1", "from": "10:00", "to": "10:45", "total_participants": 40, "free_participants": 5,  "location": "Studentų g. 50, 103 auditorija"},
+        {"key": "idomeksp2", "from": "11:00", "to": "11:45", "total_participants": 40, "free_participants": 40, "location": "Studentų g. 50, 103 auditorija"},
+        {"key": "idomeksp3", "from": "12:00", "to": "12:45", "total_participants": 40, "free_participants": 35, "location": "Studentų g. 50, 103 auditorija"}
+      ]
+    },
+    "airsoft": {
+      "key": "airsoft",
+      "type": "activities",
+      "name": "Airsoft ir Karybos mokslo pagrindai",
+      "activity_desc": "Moksleiviai dalyvaus „Battalios“ airsoft ginklų mechanizmų bei kitos karinės technikos mokomosiose demonstracijose",
+      "activity_img": null,
+      "recommended_age": null,
+      "times": [
+        {"key": "airsoft1", "from": "09:00", "to": "10:30", "total_participants": 20, "free_participants": 5,  "location": "Studentų g. 50"},
+        {"key": "airsoft2", "from": "10:40", "to": "12:10", "total_participants": 20, "free_participants": 10, "location": "Studentų g. 50"},
+        {"key": "airsoft3", "from": "12:15", "to": "13:45", "total_participants": 20, "free_participants": 15, "location": "Studentų g. 50"},
+        {"key": "airsoft4", "from": "14:15", "to": "15:45", "total_participants": 20, "free_participants": 15, "location": "Studentų g. 50"},
+        {"key": "airsoft5", "from": "15:55", "to": "17:25", "total_participants": 20, "free_participants": 7,  "location": "Studentų g. 50"}
+      ]
+    },
+    "lazer": {
+	    "key": "lazer",
       "type": "lecture",
-      "lecturer": "Kernius Vilkevičius",
-      "lecturer_desc": "A young researcher in the field of plasmonics and nanophotonics. The area of investigation is plasmonic materials fabricated using ultrashort lasers. Studying PhD of Material Engineering at Center for Physical Sciences and Technology.",
+      "lecturer": "lekt. Kernius Vilkevičius",
+      "lecturer_desc": "A young researcher in the field of plasmonics and nanophotonics. The area of investigation is plasmonic materials fabricated using ultrashort lasers. Studying PhD of Material Engineering at Center for Physical Sciences and Technology.",
       "lecturer_img": null,
-      "activity": "Lazeriai: nuo Žvaigždžių karų iki vėžio gydymo",
-      "activity_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a hendrerit dui, a feugiat velit. Maecenas porttitor, ipsum at ultricies aliquet, ante sapien consectetur ligula, in viverra ligula erat placerat eros. Vestibulum ut tortor cursus, maximus turpis ac, commodo neque. Pellentesque molestie dui at tortor rhoncus pellentesque. Duis at vulputate orci. Nulla placerat vehicula neque et tristique. Vestibulum nec turpis id diam malesuada luctus vel eget ligula.",
+      "name": "Lazeriai: nuo Žvaigždžių karų iki vėžio gydymo",
+      "activity_desc": "Paskaitoje bus pristatomi ir griaunami mitai apie mokslinės fantastikos filmuose vaizduojamus lazerius, susipažinsite su realiais lazerių pritaikymais medicinoje ir kasdienybėje, o paskaitos pabaigoje galėsite gyvai pamatyti keletą lazerinių eksperimentų",
       "activity_img": null,
       "recommended_age": "16+",
       "times": [
-        {"from": "9:00", "to": "10:00", "total_participants": 200, "free_participants": 137}
+        {"key": "lazer1", "from": "09:00", "to": "10:00", "total_participants": 150, "free_participants": 100,  "location": "Studentų g. 50, 101 auditorija"}
       ]
     },
-    "dirbtinis_intektas": {
+    "patraukipat": {
+	    "key": "patraukipat",
+      "type": "lecture",
+      "lecturer": "prof. Stanislovas Masiokas",
+      "lecturer_desc": "Stanislovas Masiokas (1933 m. vasario 6 d. Janionių kaime, Ramygalos valsčiuje, Panevėžio apskrityje) - inžinierius elektrikas, technologijos mokslų daktaras, profesorius, KTU katedros vedėjas, dekanas, visuomenininkas",
+      "lecturer_img": null,
+      "name": "Patraukli pateiktis Lietuviška standartinė klaviatūra",
+      "activity_desc": "Paskaitos metu bus pristatytos patrauklios pateikties kūrimo paslaptys bei lietuviškos klaviatūros idėja",
+      "activity_img": null,
+      "recommended_age": "16+",
+      "times": [
+        {"key": "patraukipat1", "from": "10:00", "to": "11:45", "total_participants": 150, "free_participants": 50,  "location": "Studentų g. 50, 102 auditorija"}
+      ]
+    },
+	  "jaunimasai": {
+	    "key": "jaunimasai",
       "type": "lecture",
       "lecturer": "dr. Laura Daniusevičiūtė - Brazaitė",
       "lecturer_desc": "Mokslinių tyrimų sritys apima neuromokslą/ugdymo neuromokslą, Įtraukųjį skaitmeninį ugdymą per dirbtinio intelekto technologijas, bei ryšį tarp žmogaus pažintinės funkcijos ir sveikatos kaip psichinės, fizinės ir socialinės gerovės",
       "lecturer_img": null,
-      "activity": "Jaunimas ir dirbtinis intelektas: kur mes esame?",
-      "activity_desc": "Paskaitoje bus kalbama apie dirbtinio intelekto gristų technologijų galimybes, kurios prisidėtų stiprinant paauglių ir jaunuolių mokymąsi, kūrybinę raišką bei bendrąją gerovė.",
+      "name": "Jaunimas ir dirbtinis intelektas: kur mes esame?",
+      "activity_desc": "Paskaitoje bus kalbama apie dirbtiniu intelektu gristų technologijų galimybes, kurios prisidėtų stiprinant paauglių ir jaunuolių mokymąsi, kūrybinę raišką bei bendrąją gerovę",
       "activity_img": null,
-      "recommended_age": "12+",
+      "recommended_age": "16+",
       "times": [
-        {"from": "11:00", "to": "11:45", "total_participants": 150, "free_participants": 10}
+        {"key": "jaunimasai1", "from": "11:00", "to": "11:45", "total_participants": 150, "free_participants": 50,  "location": "Studentų g. 50, 101 auditorija"}
       ]
     },
-    "airsoft": {
-      "type": "activities",
-      "activity": "Airsoft ir Karybos mokslo pagrindai",
-      "activity_desc": "MB „Battalia“, kuri specializuojasi į Airsoft ir karinės temos veiklas bei apmokymus, suvienija jėgas su KTU SMD į jaudinantį bendradarbiavimo renginį, kuriame edukacija yra derinama su adrenaliną skatinančia patirtimi.",
+    "robotatlyg": {
+	    "key": "robotatlyg",
+      "type": "lecture",
+      "lecturer": "lekt. Gintautas Narvydas",
+      "lecturer_desc": "No biografy :(",
+      "lecturer_img": null,
+      "name": "Ar robotai atims darbus ir atlyginimus iš žmonių?",
+      "activity_desc": "Paskaitoje bus pristatytos šių dienų robotikos ir dirbtinio intelekto vystymo naujovės, kaip tai atsilieps darbo rinkai bei kokie yra žmonių lūkesčiai",
+      "activity_img": null,
+      "recommended_age": "16+",
+      "times": [
+        {"key": "robotatlyg1", "from": "12:00", "to": "13:00", "total_participants": 20, "free_participants": 20,  "location": "Studentų g. 48, 113 auditorija"}
+      ]
+    },
+    "diponas": {
+	    "key": "diponas",
+      "type": "lecture",
+      "lecturer": "doc. Nerijus Čepulis",
+      "lecturer_desc": "Would describe myself as a fast learner and a curious person. Have a clear goal and the discipline to get to it. Only need the opportunities to work even harder and achieve my dream. I like working with people, getting to know how they work, work along side them.",
+      "lecturer_img": null,
+      "name": "Dirbtinis intelektas: ar tarnas vieną dieną gali tapti ponu?",
+      "activity_desc": "„Žmogus bijo to, ko nesupranta.“ Šiuos žodžius ištaria Dirbtinis intelektas kino filme „Viešpatavimas“ (angl. „Transcendence“, 2014). Kiek pagrįsta yra žmogaus baimė dėl technologijų ateities?",
+      "activity_img": null,
+      "recommended_age": "16+",
+      "times": [
+        {"key": "diponas1", "from": "12:00", "to": "13:00", "total_participants": 150, "free_participants": 50,  "location": "Studentų g. 50, 102 auditorija"}
+      ]
+    },
+    "juodskyl": {
+	    "key": "juodskyl",
+      "type": "lecture",
+      "lecturer": "dr. Artūras Acus",
+      "lecturer_desc": "Most important publications 1) Exponentials of general multivector in 3D Clifford algebras, Nonlinear Analysis: Modelling and Control, 2022 2) Negative flow of energy in a mechanical wave, Lithuanian Journal of Physics, 2020 3)Classical analog to the Airy wave packet,.Lithuanian Journal of Physics, 2019 4) The Inverse of a Multivector: Beyond the Threshold p+q=5, Advances in Applied Clifford Algebras, 2018 5) Calculation of Quantum Eigens with Geometrical Algebra Rotors, Advances in Applied Clifford Algebras, 2015 6) Closed form solution for a double quantum well using Gröbner basis, Physica Scripta, 2011",
+      "lecturer_img": null,
+      "name": "Juodosios skylės: nuo idėjos iki nuotraukų",
+      "activity_desc": "Paskaitoje bus apžvelgiama juodųjų skylių tyrinėjimo istorija nuo Džono Mičelo ir Pjero Simono Laplaso pastebėjimų iki paskutinių mokslo pasiekimų. Pakeliui trumpai paaiškinama reliatyvumo teorijos esmė, kai kurie jos paradoksai, aptariama juodųjų skylių klasifikacija ir juodųjų skylių buvimą įrodantys stebėjimo duomenys",
+      "activity_img": null,
+      "recommended_age": "16+",
+      "times": [
+        {"key": "juodskyl1", "from": "13:00", "to": "14:00", "total_participants": 150, "free_participants": 50,  "location": "Studentų g. 50, 101 auditorija"}
+      ]
+    },
+    "mokssriub": {
+	    "key": "mokssriub",
+      "type": "lecture",
+      "lecturer": "lekt. Ignas Kančys dr. Mažena ir Mackoit-Sinkevičienė FIXME",
+      "lecturer_desc": "FIXME du žmonės",
+      "lecturer_img": null,
+      "name": "Kaip „verda“ Mokslo Sriuba?",
+      "activity_desc": "Paskaitoje bus pristatyti televizijos laidos „Mokslo sriuba“ kūrimo ypatumai",
       "activity_img": null,
       "recommended_age": null,
       "times": [
-        {"from": "10:00", "to": "10:45", "total_participants": 20, "free_participants": 5},
-        {"from": "11:00", "to": "11:45", "total_participants": 20, "free_participants": 10}
+        {"key": "mokssriub1", "from": "14:00", "to": "15:00", "total_participants": 150, "free_participants": 50,  "location": "Studentų g. 50, 102 auditorija"}
       ]
     },
-    "ekspermentai": {
-      "type": "activities",
-      "activity": "Įdomieji eksperimentai",
-      "activity_desc": "KTU SMD surengs jau tradicija tapusius įdomiųjų eksperimentų pasirodymus",
+	  "oledlight": {
+	    "key": "oledlight",
+      "type": "lecture",
+      "lecturer": "dr. Audrius Bučinskas ir dr. Dmytro Volyniuk FIXME",
+      "lecturer_desc": "FIXME du žmonės",
+      "lecturer_img": null,
+      "name": "OLEDisėja: Kelionė ieškant efektyvių šviesos šaltinių",
+      "activity_desc": "Ekskursija Santakos slėnyje",
       "activity_img": null,
-      "recommended_age": null,
+      "recommended_age": "16+",
       "times": [
-        {"from": "10:00", "to": "10:45", "total_participants": 20, "free_participants": 5},
-        {"from": "11:00", "to": "11:45", "total_participants": 20, "free_participants": 10}
+        {"key": "oledlight1", "from": "14:00", "to": "14:30", "total_participants": 12, "free_participants": 8,  "location": "K. Baršausko g. 59, Santakos slėnis"},
+		    {"key": "oledlight2", "from": "15:00", "to": "15:30", "total_participants": 12, "free_participants": 12,  "location": "K. Baršausko g. 59, Santakos slėnis"}
       ]
     }
   }

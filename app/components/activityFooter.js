@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { SelectedActivitiesContext } from '../context/selectedActivitiesContextProvider';
 
 export function ActivityFooter({activity}) {
+    const { selectedActivities, setSelectedActivities, addSelectedActivity } = useContext(SelectedActivitiesContext);
+
     const time = activity['times'][0]
 
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -8,7 +11,16 @@ export function ActivityFooter({activity}) {
 
     const handleDropdownChange = (event) => {
         const newIndex = event.target.value;
-        setSelectedIndex(newIndex);
+        setSelectedIndex(newIndex)
+    };
+
+    const handleAddActivity = (event) => {
+        console.log(selectedTime)
+        addSelectedActivity(
+            {
+                ...selectedTime
+            }    
+        );
     };
 
     return (
@@ -17,7 +29,7 @@ export function ActivityFooter({activity}) {
                 <p>Kokiam laikui registruojates?
                     <select value={selectedIndex} onChange={handleDropdownChange}>
                         {activity['times'].map((option, index) => (
-                        <option key={index} value={index}>
+                        <option value={index} key={index}>
                             {option['from']}-{option['to']} ({option['free_participants']})
                         </option>
                         ))}
@@ -28,7 +40,7 @@ export function ActivityFooter({activity}) {
                 <p>Liko {selectedTime['free_participants']} vietų (iš {selectedTime['total_participants']})</p>
             </div>
             <div className='activity-footer-item'>
-                <button>Pridėti prie registracijos</button>
+                <button onClick={handleAddActivity}>Pridėti prie registracijos</button>
             </div>
         </div>
     );
