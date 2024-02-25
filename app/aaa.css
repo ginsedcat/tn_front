@@ -1,0 +1,49 @@
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 2px solid black;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    width: 100%;
+    height: 700px;
+}
+
+
+
+
+
+
+.side-widget {
+    position: fixed; /* Stick it to the side */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left side */
+    height: 100%; /* Full height */
+    z-index: 1000; /* Ensure it's on top of other content */
+    user-select: none;
+}
+.side-widget-toggle-tab {
+    box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 8px;
+    position: absolute;
+    right: -50px; /* Adjust based on actual width of the tab */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px; /* Width of the tab */
+    height: 100px; /* Height of the tab */
+    background-color: #FFFFFF;
+    text-align: center;
+    line-height: 100px; /* Center the icon vertically */
+    cursor: pointer;
+}
+.side-widget-content {
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    width: 200px; /* Adjust as needed */
+    height: 100%; /* Full height */
+    overflow-y: auto;
+}

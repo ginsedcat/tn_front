@@ -201,9 +201,9 @@ export function TimeItem({ className, x0=0, y0=0, x1=10, y1=10, item, value, tim
     };
     return <div className={className} style={childStyle} onClick={handleClick}>
         <div>
-            <div>{`${time.from}-${time.to}`}</div>
+            {/* <div>{`${time.from}-${time.to}`}</div>
             <div>{`${item.name.substring(0,6)}...`}</div>
-            <div>{value}</div>
+            <div>{value}</div> */}
         </div>
     </div>;
 };

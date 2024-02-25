@@ -246,6 +246,13 @@ h2 {
     flex-direction: column;
     width: 20%;
 }
+@media (max-width: 768px) {
+    .timeline-container {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+}
 
 .container-a {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

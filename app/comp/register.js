@@ -4,6 +4,7 @@ import { ItemList } from './itemList'
 import { Menu } from './menu'
 
 import data from '../../misc/data.json'
+import { SideWidget, GetResponsiveComponent} from '../aaa/main'
 
 export function Register() {
     const itemsDict = {...data['all_items'], 'contactinfo': {'name': 'Kontaktinė Informacija', 'key': 'contactinfo'}}
@@ -54,18 +55,20 @@ export function Register() {
             });
         }
     }
+
+    const menu = <Menu
+        itemClassName='container-b'
+        itemsKeys={[{'key': 'contactinfo', 'level': 0}, ...itemsOrder]}
+        itemsDict={itemsDict}
+        refsDict={refDict}
+    />
+
     return (
         <div className='register-container'>
-            <div className='menu-container'>
-                <StickyDefault className='container-a'>
-                    <Menu
-                        itemClassName='container-b'
-                        itemsKeys={[{'key': 'contactinfo', 'level': 0}, ...itemsOrder]}
-                        itemsDict={itemsDict}
-                        refsDict={refDict}
-                    />
-                </StickyDefault>
-            </div>
+            {GetResponsiveComponent(
+                <div className='menu-container'><StickyDefault className='container-a'>{menu}</StickyDefault></div>,
+                <SideWidget>{menu}</SideWidget>
+            )}
             <div className='items-container'>
                 <UserForm
                         className='container-a container-c'
