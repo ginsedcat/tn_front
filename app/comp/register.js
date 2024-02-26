@@ -4,7 +4,7 @@ import { ItemList } from './itemList'
 import { Menu } from './menu'
 
 import data from '../../misc/data.json'
-import { SideWidget, GetResponsiveComponent} from '../aaa/main'
+import { SideWidget, GetResponsiveComponent } from '../aaa/main'
 
 export function Register() {
     const itemsDict = {...data['all_items'], 'contactinfo': {'name': 'Kontaktinė Informacija', 'key': 'contactinfo'}}
