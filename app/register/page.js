@@ -2,8 +2,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 
-import StickyBox from "react-sticky-box";
-
 import { getItemDictionary, getItemArray, setItemSelectedFunc } from './utilFunctions'
 import { Item } from './item'
 import { UserForm } from './userForm'
@@ -22,14 +20,13 @@ export default function Home () {
         setItemsArray(getItemArray())
     }, [])
     return <div className="flex-row register">
-        <StickyBox offsetTop={20} offsetBottom={20}>
+        
             <SideBar
                 toggleAbsolute={true}
                 toggle={<SideClick/>}
             >
                 <Menu itemsDict={{...itemsDict, 'user-form': {'key': 'user-form', 'name': 'Kontaktinė Informacija'}}} itemsArray={[{'key': 'user-form', 'level': 0}, ...itemsArray]} refDict={refDict}/>
             </SideBar>
-        </StickyBox>
         <div className="flex-col items">
             <UserForm setFormInfoDict={setFormInfoDict} refDict={refDict}/>
             {
@@ -39,13 +36,11 @@ export default function Home () {
                 })
             }
         </div>
-        <StickyBox offsetTop={20} offsetBottom={20}>
             <SideBar
                 left={false}
-                toggle={<div>dssdfdfddfsdsdsd</div>}
+                toggle={<SideClick/>}
             >
                 <Menu itemsDict={{...itemsDict, 'user-form': {'key': 'user-form', 'name': 'Kontaktinė Informacija'}}} itemsArray={[{'key': 'user-form', 'level': 0}, ...itemsArray]} refDict={refDict}/>
             </SideBar>
-        </StickyBox>
     </div>
 }

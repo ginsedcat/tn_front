@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import StickyBox from "react-sticky-box";
 
 export function Input({ label, onChange, name, value }) {
     return <div className="flex-col input">
@@ -30,15 +31,20 @@ export function SideBar({ children, toggle, left = true, toggleAbsolute = false 
     const [isCollapsed, setIsCollapsed] = useState(true);
 
     const toggleSidebar = () => setIsCollapsed(!isCollapsed);
-  
-    return <div className={`side-bar-container ${toggleAbsolute ? '' : 'relative'}`}>
-        <div className={`side-bar ${left ? '' : 'right'}`}>
-            <div className={`side-bar-main ${isCollapsed ? 'collapsed' : ''}`}>
-                <div className='side-bar-main-content'>{children}</div>
+
+    return <>
+        <div className={`overlay ${!isCollapsed ? 'active' : ''}`}></div>
+        <StickyBox className={`side-bar-sticky ${isCollapsed ? 'collapsed' : ''}`} offsetTop={20} offsetBottom={20}>
+            <div className={`side-bar-container ${isCollapsed ? 'collapsed' : ''} ${toggleAbsolute ? '' : 'relative'}`}>
+                <div className={`side-bar ${left ? '' : 'right'}`}>
+                    <div className={`side-bar-main ${isCollapsed ? 'collapsed' : ''}`}>
+                        <div className='side-bar-main-content'>{children}</div>
+                    </div>
+                    <div className='side-bar-toggle' onClick={toggleSidebar}>{toggle}</div>
+                </div>
             </div>
-            <div className='side-bar-toggle' onClick={toggleSidebar}>{toggle}</div>
-        </div>
-    </div>
+        </StickyBox>
+    </>
 }
 
 export function SideClick ({}) {
