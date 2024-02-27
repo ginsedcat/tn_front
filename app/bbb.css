@@ -155,7 +155,6 @@
     align-items: flex-start;
 }
 /* Sidebar */
-
 .side-bar-container,
 .side-bar-sticky {
     z-index: 101;
@@ -183,6 +182,10 @@
 .side-bar-container.relative,
 .side-bar-toggle {
     width: 5vw;
+}
+.side-bar-main {
+    overflow-y: auto;
+    height: 90vh;
 }
 .side-bar-main,
 .side-bar-main-content {
