@@ -8,7 +8,7 @@ import { getItemDictionary, getItemArray, setItemSelectedFunc } from './utilFunc
 import { Item } from './item'
 import { UserForm } from './userForm'
 import { Menu } from './menu'
-import { SideBar } from './utilComponents'
+import { SideBar, SideClick } from './utilComponents'
 
 export default function Home () {
     const refDict = useRef({})
@@ -23,7 +23,10 @@ export default function Home () {
     }, [])
     return <div className="flex-row register">
         <StickyBox offsetTop={20} offsetBottom={20}>
-            <SideBar>
+            <SideBar
+                toggleAbsolute={true}
+                toggle={<SideClick/>}
+            >
                 <Menu itemsDict={{...itemsDict, 'user-form': {'key': 'user-form', 'name': 'Kontaktinė Informacija'}}} itemsArray={[{'key': 'user-form', 'level': 0}, ...itemsArray]} refDict={refDict}/>
             </SideBar>
         </StickyBox>
@@ -36,5 +39,13 @@ export default function Home () {
                 })
             }
         </div>
+        <StickyBox offsetTop={20} offsetBottom={20}>
+            <SideBar
+                left={false}
+                toggle={<div>dssdfdfddfsdsdsd</div>}
+            >
+                <Menu itemsDict={{...itemsDict, 'user-form': {'key': 'user-form', 'name': 'Kontaktinė Informacija'}}} itemsArray={[{'key': 'user-form', 'level': 0}, ...itemsArray]} refDict={refDict}/>
+            </SideBar>
+        </StickyBox>
     </div>
 }
