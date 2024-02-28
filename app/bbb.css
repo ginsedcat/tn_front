@@ -45,6 +45,11 @@
     }
 }
 
+:root {
+    display: flex;
+    justify-content: center;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -74,6 +79,7 @@
 }
 
 .register {
+    max-width: 1500px;
     justify-content: center;
     gap: var(--main-gap);
 }
