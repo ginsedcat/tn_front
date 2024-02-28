@@ -11,15 +11,20 @@ export function Item({ item, refDict, participantCount, setCurrentInput, current
     }
     const [time, setTime] = useState(item.times.dict[item.times.array[0]])
     useEffect(()=> {
-        if (!(currentInput && currentInput.times[time.key])) {
+        if (!(currentInput && typeof currentInput.times[time.key] !== 'undefined')) {
             setParticipant(participantCount)
         }
     }, [participantCount])
     useEffect(() => {
-        if(currentInput && currentInput.times[time.key]) {
+        if(currentInput && typeof currentInput.times[time.key] !== 'undefined') {
             setParticipant(currentInput.times[time.key])
         }
     }, [time])
+    useEffect(() => {
+        if (currentInput && currentInput.active) {
+            setTime(item.times.dict[currentInput.active])
+        }
+    }, [currentInput])
     const onSelect = (e) => {
         setTime(item.times.dict[e.target.value])
     }
@@ -36,11 +41,14 @@ export function Item({ item, refDict, participantCount, setCurrentInput, current
             </div>}
         </div>}
         { item.type !== 'title' && <div className='flex-col footer activity'>
-            <div>{time.location}</div>
+            <div className='flex-row'>
+                <div>{time.location}</div>
+                <div>{`Liko ${time.free_participants} vietų`}</div>
+            </div>
             <div className='flex-row footer-input'>
                 {item.times.array.length > 1 && <Select label='Pasirinkite laiką' onChange={onSelect} value={time.key} options={dict2Array(item.times.dict, item.times.array)}/>}
                 {item.times.array.length == 1 && <div className="flex-col select">{`Laikas: ${time.from}-${time.to}`}</div>}
-                <Input label={`Kiek dalyvių registruojate? (Liko ${time.free_participants} vietų)`} onChange={onInput} value={participants}/>
+                <Input label={`Kiek dalyvių registruojate?`} onChange={onInput} value={participants}/>
                 <Button label={'Pridėti veiklą'} onClick={onClick}/>
             </div>
         </div>}

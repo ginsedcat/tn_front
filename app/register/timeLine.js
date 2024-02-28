@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { SideClick, SideTitle } from './utilComponents'
 import { createTimeArrayWithSpacing, minsToTime, timeToMins } from './utilFunctions'
 
-export function TimeLine({ timesSelectedDict, startTime, endTime }) {
+export function TimeLine({ timesSelectedDict, startTime, endTime, refDict, setClicks, setItemSelected }) {
     const startMins = timeToMins(startTime)
     const endMins = timeToMins(endTime)
     const times = createTimeArrayWithSpacing(startMins, endMins, 60)
@@ -12,8 +12,19 @@ export function TimeLine({ timesSelectedDict, startTime, endTime }) {
         <div className='small-time-line-timeline'>
             <div className='small-time-line-timeline-content'>
                 {Object.entries(timesSelectedDict).map(([key, value]) => {
-                    console.log(value)
-                    return <div className='big-time-line-timeline-time-box' style={{
+                    const handleClick = () => {
+                        if (setClicks) setClicks((prev) => ({
+                            'key': value.item.key,
+                            'keyTime': key,
+                            'counter': prev.counter + 1
+                        }))
+                        refDict.current[value.item.key].scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        setItemSelected(value.item.key, null, null, key)
+                    }
+                    return <div onClick={handleClick} className='big-time-line-timeline-time-box' style={{
                         position: 'absolute',
                         left: `${value.x0 * 100}%`,
                         top: `${value.y0 * 100}%`,

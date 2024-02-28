@@ -27,6 +27,11 @@ export default function Home () {
     useEffect(() => {
         setTimesSelectedDict(itemsSelectedDictToTimesSelectedDict(itemsSelectedDict, itemsDict, startTime, endTime))
     }, [itemsSelectedDict])
+    useEffect(() => {
+        if(clicks.keyTime) {
+
+        }
+    }, [clicks])
     return <div className="flex-row register">
         
             <SideBar toggleAbsolute={true} closeTrigger={clicks}>
@@ -42,9 +47,9 @@ export default function Home () {
                 })
             }
         </div>
-            <SideBar left={false}>
+            <SideBar left={false} closeTrigger={clicks}>
                 <SmallTimeLine timesSelectedDict={timesSelectedDict} startTime={startTime} endTime={endTime}/>
-                <TimeLine timesSelectedDict={timesSelectedDict} startTime={startTime} endTime={endTime}/>
+                <TimeLine timesSelectedDict={timesSelectedDict} startTime={startTime} endTime={endTime} refDict={refDict} setClicks={setClicks} setItemSelected={setItemSelected}/>
             </SideBar>
     </div>
 }

@@ -38,11 +38,11 @@ function flattenItemsArray(items, level = 0) {
 }
 
 export function setItemSelectedFunc(setItemsSelected) {
-    return (key, timeKey, value) => {setItemSelected(key, timeKey, value, setItemsSelected)}
+    return (key, timeKey, value, active) => {setItemSelected(key, timeKey, value, active, setItemsSelected)}
 }
 
-function setItemSelected(key, timeKey, value, setItemsSelected) {
-    if (value >= 0) {
+function setItemSelected(key, timeKey, value, active, setItemsSelected) {
+    if (value != null && value >= 0) {
         setItemsSelected(prevItems => ({
             ...prevItems,
             [key]: {
@@ -52,6 +52,14 @@ function setItemSelected(key, timeKey, value, setItemsSelected) {
                     ...(prevItems[key] ? prevItems[key].times : {}),
                     [timeKey]: value
                 }
+            }
+        }))
+    } else if(active) {
+        setItemsSelected(prevItems => ({
+            ...prevItems,
+            [key]: {
+                ...prevItems[key],
+                'active': active
             }
         }))
     } else {
