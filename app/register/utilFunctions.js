@@ -65,7 +65,7 @@ function setItemSelected(key, timeKey, value, active, setItemsSelected) {
     } else {
         setItemsSelected(prevItems => {
             const newItems = { ...prevItems }
-            if (newItems[key] && newItems[key].times[timeKey]) {
+            if (newItems[key] && newItems[key].times[timeKey] !== null) {
                 delete newItems[key].times[timeKey]
                 if (Object.keys(newItems[key].times).length == 0) {
                     delete newItems[key]

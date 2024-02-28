@@ -156,6 +156,15 @@
     outline: none;
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
+.button.remove div {
+    background-color: #D24545;
+}
+.button.remove div:hover {
+    background-color: #A94438
+}
+.button.remove div:active {
+    box-shadow: 0 0 0 2px rgba(169, 68, 56, 0.5);
+}
 
 .select {
     flex: 1;

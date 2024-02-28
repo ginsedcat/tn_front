@@ -21,8 +21,8 @@ export function Select({label, onChange, name, value, options=[]}) {
     </div>
 }
 
-export function Button({label, onClick}) {
-    return <div className="button">
+export function Button({label, onClick, className}) {
+    return <div className={`${className} button`}>
         <div onClick={onClick}>{label}</div>
     </div>
 }
