@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export function Menu({ itemsDict, itemsArray, refDict }) {
+export function Menu({ itemsDict, itemsArray, refDict, setClicks }) {
     const [topItem, setTopItem] = useState(null);
     useEffect(() => {
         const handleScroll = () => {
@@ -23,13 +23,17 @@ export function Menu({ itemsDict, itemsArray, refDict }) {
     }, [])
     return <div className='flex-col item menu'> 
         {itemsArray.map((key) => {
-            return <MenuItem highlight={key.key === topItem} level={key.level} key={key.key} item={itemsDict[key.key]} itemRef={refDict}/>
+            return <MenuItem setClicks={setClicks} highlight={key.key === topItem} level={key.level} key={key.key} item={itemsDict[key.key]} itemRef={refDict}/>
         })}
     </div>
 }
 
-function MenuItem({ item, itemRef, level=0, highlight=false }) {
+function MenuItem({ item, itemRef, level=0, highlight=false, setClicks }) {
     const handleClick = () => {
+        if (setClicks) setClicks((prev) => ({
+            'key': item.key,
+            'counter': prev.counter + 1
+        }))
         itemRef.current[item.key].scrollIntoView({
             behavior: 'smooth',
             block: 'start'

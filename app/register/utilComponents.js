@@ -27,10 +27,14 @@ export function Button({label, onClick}) {
     </div>
 }
 
-export function SideBar({ children, toggle, left = true, toggleAbsolute = false }) {
+export function SideBar({ children, left = true, toggleAbsolute = false, closeTrigger = null }) {
+    const childrenArray = React.Children.toArray(children);
     const [isCollapsed, setIsCollapsed] = useState(true);
 
     const toggleSidebar = () => setIsCollapsed(!isCollapsed);
+    useEffect(()=>{
+        if (closeTrigger) setIsCollapsed(true);
+    }, [closeTrigger])
 
     return <>
         <div className={`overlay ${!isCollapsed ? 'active' : ''}`}></div>
@@ -38,9 +42,9 @@ export function SideBar({ children, toggle, left = true, toggleAbsolute = false 
             <div className={`side-bar-container ${isCollapsed ? 'collapsed' : ''} ${toggleAbsolute ? '' : 'relative'}`}>
                 <div className={`side-bar ${left ? '' : 'right'}`}>
                     <div className={`side-bar-main ${isCollapsed ? 'collapsed' : ''}`}>
-                        <div className='side-bar-main-content'>{children}</div>
+                        <div className='side-bar-main-content'>{childrenArray.slice(1)}</div>
                     </div>
-                    <div className='side-bar-toggle' onClick={toggleSidebar}>{toggle}</div>
+                    <div className='side-bar-toggle' onClick={toggleSidebar}>{childrenArray[0]}</div>
                 </div>
             </div>
         </StickyBox>
@@ -48,5 +52,13 @@ export function SideBar({ children, toggle, left = true, toggleAbsolute = false 
 }
 
 export function SideClick ({}) {
-    return <div>dsds</div>
+    return <div className='side-click'>
+        <div className='side-click-dash'></div>
+        <div className='side-click-dash'></div>
+        <div className='side-click-dash'></div>
+    </div>
+}
+
+export function SideTitle ({ children, className }) {
+    return <div className={`side-click ${className}`}>{children}</div>
 }
