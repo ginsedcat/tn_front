@@ -8,7 +8,7 @@ import { getItemDictionary, getItemArray, setItemSelectedFunc, itemsSelectedDict
 import { Item } from './item'
 import { UserForm } from './userForm'
 import { Menu } from './menu'
-import { SideBar, SideClick } from './utilComponents'
+import { Button, SideBar, SideClick } from './utilComponents'
 import { SmallTimeLine, TimeLine } from './timeLine'
 
 export default function Home () {
@@ -51,12 +51,12 @@ export default function Home () {
     return <div className="flex-row register">
         {!isMobile && <div className='pc-container'>
             <StickyBox offsetTop={20} offsetBottom={20}>
-                <Menu itemsDict={{...itemsDict, 'user-form': {'key': 'user-form', 'name': 'Kontaktinė Informacija'}}} itemsArray={[{'key': 'user-form', 'level': 0}, ...itemsArray]} refDict={refDict}/>
+                <Menu itemsDict={{...itemsDict, 'user-form': {'key': 'user-form', 'name': 'Kontaktinė Informacija'}, 'register': {'key': 'register', 'name': 'Registruotis'}}} itemsArray={[{'key': 'user-form', 'level': 0}, ...itemsArray, {'key': 'register', 'level': 0}]} refDict={refDict}/>
             </StickyBox>
         </div>}
             {isMobile && <SideBar toggleAbsolute={true} closeTrigger={clicks}>
                 <SideClick/>
-                <Menu itemsDict={{...itemsDict, 'user-form': {'key': 'user-form', 'name': 'Kontaktinė Informacija'}}} itemsArray={[{'key': 'user-form', 'level': 0}, ...itemsArray]} refDict={refDict} setClicks={setClicks}/>
+                <Menu itemsDict={{...itemsDict, 'user-form': {'key': 'user-form', 'name': 'Kontaktinė Informacija'}, 'register': {'key': 'register', 'name': 'Registruotis'}}} itemsArray={[{'key': 'user-form', 'level': 0}, ...itemsArray, {'key': 'register', 'level': 0}]} refDict={refDict} setClicks={setClicks}/>
             </SideBar>}
         <div className="flex-col items">
             <UserForm setFormInfoDict={setFormInfoDict} refDict={refDict}/>
@@ -66,6 +66,9 @@ export default function Home () {
                     return <Item key={item.key} item={item} refDict={refDict} participantCount={formInfoDict.participantCount} setCurrentInput={setItemSelected} currentInput={itemsSelectedDict[item.key]}/>
                 })
             }
+            <div ref={(element) => refDict.current['register'] = element} className='flex-col item'>
+                <Button label={'Registruotis'}></Button>
+            </div>
         </div>
         {!isMobile && <div className='pc-container'>
             <StickyBox offsetTop={20} offsetBottom={20}>
