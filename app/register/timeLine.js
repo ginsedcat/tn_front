@@ -3,13 +3,18 @@ import React, { useState, useEffect } from 'react';
 import { SideClick, SideTitle } from './utilComponents'
 import { createTimeArrayWithSpacing, minsToTime, timeToMins } from './utilFunctions'
 
-export function TimeLine({ timesSelectedDict, startTime, endTime, refDict, setClicks, setItemSelected }) {
+export function TimeLine({ timesSelectedDict, startTime, endTime, refDict, setClicks, setItemSelected,  addTimes=false }) {
     const startMins = timeToMins(startTime)
     const endMins = timeToMins(endTime)
     const times = createTimeArrayWithSpacing(startMins, endMins, 60)
     return <div className='small-time-line'>
         <SideTitle className={'header-lvl1'}>Pasirinktos veiklos</SideTitle>
         <div className='small-time-line-timeline'>
+            <div className='time-line-timeline-content-times'>
+                {addTimes && <>{times.map((time) => {
+                    return <div className='small-time-line-timeline-time-label' style={{height:`${100*time.height}%`}} key={time.key}>{time.time}</div>
+                })}</>}
+            </div>
             <div className='small-time-line-timeline-content'>
                 {Object.entries(timesSelectedDict).map(([key, value]) => {
                     const handleClick = () => {
